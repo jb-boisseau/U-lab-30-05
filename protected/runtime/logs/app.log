@@ -1,0 +1,2611 @@
+2018-05-15 14:20:59 [147.210.89.197][1][fa2kjklo8fqnaeb0fa6p6kmll2][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host smtpauth.u-bordeaux.fr [No route to host #113] in /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:268
+Stack trace:
+#0 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /var/www/humhub/protected/vendor/yiisoft/yii2-swiftmailer/Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMailer.php(262): yii\swiftmailer\Mailer->sendMessage(Object(humhub\components\mail\Message))
+#5 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMessage.php(48): yii\mail\BaseMailer->send(Object(humhub\components\mail\Message))
+#6 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(180): yii\mail\BaseMessage->send()
+#7 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(87): humhub\modules\user\models\Invite->sendInviteMail()
+#8 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(57): humhub\modules\user\controllers\InviteController->createInvite('baptiste.briand...')
+#9 [internal function]: humhub\modules\user\controllers\InviteController->actionIndex()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('user/invite', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-15 14:20:48 [147.210.89.197][1][fa2kjklo8fqnaeb0fa6p6kmll2][info][application] $_GET = [
+    'r' => 'user/invite'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'ad3f2c5d6cb5843caf5a57ce3382968eae5b08f32ce10867aec7f491dc198830'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '150'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'https://ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'dGbskJXpgExe96Tc8WV_a47M1VBbrpZRAJ5SKTjRW-Prj4Mrrhh_1_md8XUvbF4HyWRyf-q7iMCv-Pq8rp3mug=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=admin%2Fuser'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; language=4fdd3236b9d80f4ed566cd32ae8a0fc137c3c76e113d64a0f7abcdca7fa131dda%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; _gid=GA1.2.2027993348.1526370430; _csrf=caf299960d5628692eb28b0baa8b2fe06c922662fc1cdd76d7761dcc82e9fc40a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%9F%E9o%BB%3B%F1%FF%9B%A7jU%A9%DE%09%21lG%A8%A7%2F%B1%15%1E%91%AFf%A8%95%96L%BDY%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; PHPSESSID=fa2kjklo8fqnaeb0fa6p6kmll2; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '51742'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Finvite'
+    'REQUEST_URI' => '/index.php?r=user%2Finvite'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526386848.152
+    'REQUEST_TIME' => 1526386848
+]
+2018-05-15 14:21:57 [147.210.89.197][1][fa2kjklo8fqnaeb0fa6p6kmll2][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host smtpauth.u-bordeaux.fr [No route to host #113] in /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:268
+Stack trace:
+#0 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /var/www/humhub/protected/vendor/yiisoft/yii2-swiftmailer/Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMailer.php(262): yii\swiftmailer\Mailer->sendMessage(Object(humhub\components\mail\Message))
+#5 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMessage.php(48): yii\mail\BaseMailer->send(Object(humhub\components\mail\Message))
+#6 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(180): yii\mail\BaseMessage->send()
+#7 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(87): humhub\modules\user\models\Invite->sendInviteMail()
+#8 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(57): humhub\modules\user\controllers\InviteController->createInvite('baptiste.briand...')
+#9 [internal function]: humhub\modules\user\controllers\InviteController->actionIndex()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('user/invite', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-15 14:21:45 [147.210.89.197][1][fa2kjklo8fqnaeb0fa6p6kmll2][info][application] $_GET = [
+    'r' => 'user/invite'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'ad3f2c5d6cb5843caf5a57ce3382968eae5b08f32ce10867aec7f491dc198830'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '150'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'https://ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => '1VQNqlHdiEaeJ8es_MEP1VgcAXvZ8hy7e6VkmjI4ui1KvWIRaix33TlNkgUiyC65H7SmVGjnAirUw8wPpHQHdA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=admin%2Fuser'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; language=4fdd3236b9d80f4ed566cd32ae8a0fc137c3c76e113d64a0f7abcdca7fa131dda%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; _gid=GA1.2.2027993348.1526370430; _csrf=caf299960d5628692eb28b0baa8b2fe06c922662fc1cdd76d7761dcc82e9fc40a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%9F%E9o%BB%3B%F1%FF%9B%A7jU%A9%DE%09%21lG%A8%A7%2F%B1%15%1E%91%AFf%A8%95%96L%BDY%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; PHPSESSID=fa2kjklo8fqnaeb0fa6p6kmll2; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '51749'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Finvite'
+    'REQUEST_URI' => '/index.php?r=user%2Finvite'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526386905.965
+    'REQUEST_TIME' => 1526386905
+]
+2018-05-15 14:22:11 [147.210.89.197][1][fa2kjklo8fqnaeb0fa6p6kmll2][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host smtpauth.u-bordeaux.fr [No route to host #113] in /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:268
+Stack trace:
+#0 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /var/www/humhub/protected/vendor/yiisoft/yii2-swiftmailer/Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMailer.php(262): yii\swiftmailer\Mailer->sendMessage(Object(humhub\components\mail\Message))
+#5 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMessage.php(48): yii\mail\BaseMailer->send(Object(humhub\components\mail\Message))
+#6 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(180): yii\mail\BaseMessage->send()
+#7 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(87): humhub\modules\user\models\Invite->sendInviteMail()
+#8 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(57): humhub\modules\user\controllers\InviteController->createInvite('baptiste.briand...')
+#9 [internal function]: humhub\modules\user\controllers\InviteController->actionIndex()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('user/invite', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-15 14:22:00 [147.210.89.197][1][fa2kjklo8fqnaeb0fa6p6kmll2][info][application] $_GET = [
+    'r' => 'user/invite'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'ad3f2c5d6cb5843caf5a57ce3382968eae5b08f32ce10867aec7f491dc198830'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '150'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'https://ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => '1VQNqlHdiEaeJ8es_MEP1VgcAXvZ8hy7e6VkmjI4ui1KvWIRaix33TlNkgUiyC65H7SmVGjnAirUw8wPpHQHdA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=admin%2Fuser'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; language=4fdd3236b9d80f4ed566cd32ae8a0fc137c3c76e113d64a0f7abcdca7fa131dda%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; _gid=GA1.2.2027993348.1526370430; _csrf=caf299960d5628692eb28b0baa8b2fe06c922662fc1cdd76d7761dcc82e9fc40a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%9F%E9o%BB%3B%F1%FF%9B%A7jU%A9%DE%09%21lG%A8%A7%2F%B1%15%1E%91%AFf%A8%95%96L%BDY%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; PHPSESSID=fa2kjklo8fqnaeb0fa6p6kmll2; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '51750'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Finvite'
+    'REQUEST_URI' => '/index.php?r=user%2Finvite'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526386920.327
+    'REQUEST_TIME' => 1526386920
+]
+2018-05-15 14:23:49 [147.210.89.197][-][4iu1ua78acgdn4nltqoc121il1][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host smtpauth.u-bordeaux.fr [No route to host #113] in /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:268
+Stack trace:
+#0 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /var/www/humhub/protected/vendor/yiisoft/yii2-swiftmailer/Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMailer.php(262): yii\swiftmailer\Mailer->sendMessage(Object(humhub\components\mail\Message))
+#5 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMessage.php(48): yii\mail\BaseMailer->send(Object(humhub\components\mail\Message))
+#6 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(137): yii\mail\BaseMessage->send()
+#7 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(110): humhub\modules\user\models\Invite->sendInviteMail()
+#8 /var/www/humhub/protected/humhub/modules/user/controllers/AuthController.php(80): humhub\modules\user\models\Invite->selfInvite()
+#9 [internal function]: humhub\modules\user\controllers\AuthController->actionLogin()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('user/auth/login', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-15 14:23:38 [147.210.89.197][-][4iu1ua78acgdn4nltqoc121il1][info][application] $_GET = [
+    'r' => 'user/auth/login'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '3376f051b6ec90a132092a105ce73ea45b85b751ffe3753cb4bd84698341f48d'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '155'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'https://ulab.u-bordeaux.fr'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=user%2Fauth%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; _gid=GA1.2.2027993348.1526370430; _csrf=caf299960d5628692eb28b0baa8b2fe06c922662fc1cdd76d7761dcc82e9fc40a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%9F%E9o%BB%3B%F1%FF%9B%A7jU%A9%DE%09%21lG%A8%A7%2F%B1%15%1E%91%AFf%A8%95%96L%BDY%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; PHPSESSID=4iu1ua78acgdn4nltqoc121il1; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '51766'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fauth%2Flogin'
+    'REQUEST_URI' => '/index.php?r=user%2Fauth%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526387018.122
+    'REQUEST_TIME' => 1526387018
+]
+2018-05-15 14:42:27 [147.210.89.197][1][o2otsur9p1g85ngmf5nu6uujg0][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host smtpauth.u-bordeaux.fr [No route to host #113] in /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:268
+Stack trace:
+#0 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /var/www/humhub/protected/vendor/yiisoft/yii2-swiftmailer/Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMailer.php(262): yii\swiftmailer\Mailer->sendMessage(Object(humhub\components\mail\Message))
+#5 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMessage.php(48): yii\mail\BaseMailer->send(Object(humhub\components\mail\Message))
+#6 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(180): yii\mail\BaseMessage->send()
+#7 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(87): humhub\modules\user\models\Invite->sendInviteMail()
+#8 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(57): humhub\modules\user\controllers\InviteController->createInvite('jbboisseau@hotm...')
+#9 [internal function]: humhub\modules\user\controllers\InviteController->actionIndex()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('user/invite', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-15 14:42:16 [147.210.89.197][1][o2otsur9p1g85ngmf5nu6uujg0][info][application] $_GET = [
+    'r' => 'user/invite'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'e4a3dded24255871c5c6abb451a049ce81138c0a7e938c36f7901ab21b5d533c'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '141'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'https://ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'iW_0ArwVjVvDvjtrbsTZX-iN7Q4c4z3rrCYF07BMyaUWhpu5h-RywGTUbsKwzfgzryVKIa32I3oDQK1GJgB0_A=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=admin%2Fuser'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; _gid=GA1.2.2027993348.1526370430; _csrf=caf299960d5628692eb28b0baa8b2fe06c922662fc1cdd76d7761dcc82e9fc40a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%9F%E9o%BB%3B%F1%FF%9B%A7jU%A9%DE%09%21lG%A8%A7%2F%B1%15%1E%91%AFf%A8%95%96L%BDY%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; PHPSESSID=o2otsur9p1g85ngmf5nu6uujg0; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '51875'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Finvite'
+    'REQUEST_URI' => '/index.php?r=user%2Finvite'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526388136
+    'REQUEST_TIME' => 1526388136
+]
+2018-05-15 16:46:21 [147.210.224.56][-][2sve6mcvtiovjqd920p42hf172][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host smtpauth.u-bordeaux.fr [No route to host #113] in /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:268
+Stack trace:
+#0 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /var/www/humhub/protected/vendor/yiisoft/yii2-swiftmailer/Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMailer.php(262): yii\swiftmailer\Mailer->sendMessage(Object(humhub\components\mail\Message))
+#5 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMessage.php(48): yii\mail\BaseMailer->send(Object(humhub\components\mail\Message))
+#6 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(137): yii\mail\BaseMessage->send()
+#7 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(110): humhub\modules\user\models\Invite->sendInviteMail()
+#8 /var/www/humhub/protected/humhub/modules/user/controllers/AuthController.php(80): humhub\modules\user\models\Invite->selfInvite()
+#9 [internal function]: humhub\modules\user\controllers\AuthController->actionLogin()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('user/auth/login', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-15 16:46:10 [147.210.224.56][-][2sve6mcvtiovjqd920p42hf172][info][application] $_GET = [
+    'r' => 'user/auth/login'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'cfbaa61b413abe3c65c81cd1493bcae01f0d41f258974055240249effe749e8b'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '148'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'https://ulab.u-bordeaux.fr'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=user%2Fauth%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_ga=GA1.2.1755817180.1515086381; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; nuxeo_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; nuxeo_redirect_user_idp=https%3A%2F%2Fidp-ubx.u-bordeaux.fr%2Fidp%2Fshibboleth; nuxeo_redirection_state=checked; nuxeo_saml_sp=aHR0cHM6Ly9udXhlby51LWJvcmRlYXV4LmZyLw%3D%3D; _saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _redirect_user_idp=https%3A%2F%2Fidp-ubx.u-bordeaux.fr%2Fidp%2Fshibboleth; PHPSESSID=2sve6mcvtiovjqd920p42hf172; language=4fdd3236b9d80f4ed566cd32ae8a0fc137c3c76e113d64a0f7abcdca7fa131dda%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _wub_saml_sp=aHR0cHM6Ly9wYXRyaWZyb25wcm9kLnVuaXYtYm9yZGVhdXguZnIvYWxsZmEtd2Vi; _gid=GA1.2.1157011053.1526306090; _csrf=dc451ccd05c5c8a3f97e4c4b6749c7f8c74a48aeb8de1c06814fa2f312a4addca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%DA%D2%F0%1F%DF%15O%ED%F7%E5%83%0DhR%E7%8A%FC%3B%D8%92%92%8DN%04%E4%B12%8FZ%F58P%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.224.56'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '52535'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fauth%2Flogin'
+    'REQUEST_URI' => '/index.php?r=user%2Fauth%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526395570.382
+    'REQUEST_TIME' => 1526395570
+]
+2018-05-15 16:48:06 [147.210.89.197][1][o2otsur9p1g85ngmf5nu6uujg0][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host mtaoutliste.u-bordeaux.fr [No route to host #113] in /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:268
+Stack trace:
+#0 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /var/www/humhub/protected/vendor/yiisoft/yii2-swiftmailer/Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMailer.php(262): yii\swiftmailer\Mailer->sendMessage(Object(humhub\components\mail\Message))
+#5 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMessage.php(48): yii\mail\BaseMailer->send(Object(humhub\components\mail\Message))
+#6 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(180): yii\mail\BaseMessage->send()
+#7 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(87): humhub\modules\user\models\Invite->sendInviteMail()
+#8 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(57): humhub\modules\user\controllers\InviteController->createInvite('sophie.guichard...')
+#9 [internal function]: humhub\modules\user\controllers\InviteController->actionIndex()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('user/invite', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-15 16:47:58 [147.210.89.197][1][o2otsur9p1g85ngmf5nu6uujg0][info][application] $_GET = [
+    'r' => 'user/invite'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '68d8fd00a4688fbb0b00ce75202cd5db39a6efec265f8b1648643cbae2c7ba13'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '149'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'https://ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'dRzLUwVP13cEmXMEQPzuq78rNakcd36CjX-feciCznPq9aToPr4o7KPzJq2e9c_H-IOShq1iYBMiGTfsXs5zKg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=admin%2Fuser'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; _gid=GA1.2.2027993348.1526370430; _csrf=caf299960d5628692eb28b0baa8b2fe06c922662fc1cdd76d7761dcc82e9fc40a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%9F%E9o%BB%3B%F1%FF%9B%A7jU%A9%DE%09%21lG%A8%A7%2F%B1%15%1E%91%AFf%A8%95%96L%BDY%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; PHPSESSID=o2otsur9p1g85ngmf5nu6uujg0; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '53552'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Finvite'
+    'REQUEST_URI' => '/index.php?r=user%2Finvite'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526395678.605
+    'REQUEST_TIME' => 1526395678
+]
+2018-05-15 16:51:01 [147.210.89.197][1][o2otsur9p1g85ngmf5nu6uujg0][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host mtaoutliste.u-bordeaux.fr [No route to host #113] in /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:268
+Stack trace:
+#0 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /var/www/humhub/protected/vendor/yiisoft/yii2-swiftmailer/Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMailer.php(262): yii\swiftmailer\Mailer->sendMessage(Object(humhub\components\mail\Message))
+#5 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMessage.php(48): yii\mail\BaseMailer->send(Object(humhub\components\mail\Message))
+#6 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(180): yii\mail\BaseMessage->send()
+#7 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(87): humhub\modules\user\models\Invite->sendInviteMail()
+#8 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(57): humhub\modules\user\controllers\InviteController->createInvite('sophie.guichard...')
+#9 [internal function]: humhub\modules\user\controllers\InviteController->actionIndex()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('user/invite', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-15 16:50:53 [147.210.89.197][1][o2otsur9p1g85ngmf5nu6uujg0][info][application] $_GET = [
+    'r' => 'user/invite'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'ab368ba724397520b1102c72d728f00e32876c7b1f52fd3b835e7d44509c64e0'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '149'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'https://ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'hrVZmxWNCJb2Vv5t84F5ZBpBfVukgiSav_RAJV6s10QZXDYgLnz3DVE8q8QtiFgIXenadBWXOgsQkuiwyOBqHQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=admin%2Fuser'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; _gid=GA1.2.2027993348.1526370430; _csrf=caf299960d5628692eb28b0baa8b2fe06c922662fc1cdd76d7761dcc82e9fc40a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%9F%E9o%BB%3B%F1%FF%9B%A7jU%A9%DE%09%21lG%A8%A7%2F%B1%15%1E%91%AFf%A8%95%96L%BDY%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; PHPSESSID=o2otsur9p1g85ngmf5nu6uujg0; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '53593'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Finvite'
+    'REQUEST_URI' => '/index.php?r=user%2Finvite'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526395853.526
+    'REQUEST_TIME' => 1526395853
+]
+2018-05-16 08:47:07 [147.210.89.197][1][iakk8frn3fgg8l4ettq0eism41][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host mtaoutliste.u-bordeaux.fr [No route to host #113] in /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:268
+Stack trace:
+#0 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /var/www/humhub/protected/vendor/yiisoft/yii2-swiftmailer/Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMailer.php(262): yii\swiftmailer\Mailer->sendMessage(Object(humhub\components\mail\Message))
+#5 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMessage.php(48): yii\mail\BaseMailer->send(Object(humhub\components\mail\Message))
+#6 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(180): yii\mail\BaseMessage->send()
+#7 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(87): humhub\modules\user\models\Invite->sendInviteMail()
+#8 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(57): humhub\modules\user\controllers\InviteController->createInvite('jbboisseau@hotm...')
+#9 [internal function]: humhub\modules\user\controllers\InviteController->actionIndex()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('user/invite', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-16 08:46:59 [147.210.89.197][1][iakk8frn3fgg8l4ettq0eism41][info][application] $_GET = [
+    'r' => 'user/invite'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'd1badd6a744c369835c4ead0f2730eec4d15734e713cdefe142fb741bb87bcad'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '141'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'https://ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'UsLuRj9VBw-AZux-b6OvG4dGazU7W5BuFw2Sbz_nrT7NK4H9BKT4lCcMudexqo53wO7MGopOjv-4azr6qasQZw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=admin%2Fuser'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; _gid=GA1.2.2027993348.1526370430; _csrf=caf299960d5628692eb28b0baa8b2fe06c922662fc1cdd76d7761dcc82e9fc40a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%9F%E9o%BB%3B%F1%FF%9B%A7jU%A9%DE%09%21lG%A8%A7%2F%B1%15%1E%91%AFf%A8%95%96L%BDY%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D; PHPSESSID=iakk8frn3fgg8l4ettq0eism41'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '53780'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Finvite'
+    'REQUEST_URI' => '/index.php?r=user%2Finvite'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526453219.478
+    'REQUEST_TIME' => 1526453219
+]
+2018-05-16 09:10:00 [147.210.179.69][-][uno496ge780fmu506kq5vpcmq5][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host mtaoutliste.u-bordeaux.fr [No route to host #113] in /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:268
+Stack trace:
+#0 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /var/www/humhub/protected/vendor/yiisoft/yii2-swiftmailer/Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMailer.php(262): yii\swiftmailer\Mailer->sendMessage(Object(humhub\components\mail\Message))
+#5 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMessage.php(48): yii\mail\BaseMailer->send(Object(humhub\components\mail\Message))
+#6 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(137): yii\mail\BaseMessage->send()
+#7 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(110): humhub\modules\user\models\Invite->sendInviteMail()
+#8 /var/www/humhub/protected/humhub/modules/user/controllers/AuthController.php(80): humhub\modules\user\models\Invite->selfInvite()
+#9 [internal function]: humhub\modules\user\controllers\AuthController->actionLogin()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('user/auth/login', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-16 09:09:52 [147.210.179.69][-][uno496ge780fmu506kq5vpcmq5][info][application] $_GET = [
+    'r' => 'user/auth/login'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'ec91f571387909fa03066adb6b4baec9d4a0104918157fecd35715e1680eb7f9'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=user%2Fauth%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '141'
+    'HTTP_COOKIE' => '_wub_saml_sp=aHR0cHM6Ly9ndzUuaW5mcmEudW5pdi1ib3JkZWF1eC5mci9zaGliYm9sZXRo; _wub_saml_idp=aHR0cHM6Ly9pZHAudW5pdi1wYXUuZnIvaWRwL3NoaWJib2xldGg%3D+aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; language=4fdd3236b9d80f4ed566cd32ae8a0fc137c3c76e113d64a0f7abcdca7fa131dda%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _identity=f8c767d1266b05aa7358c3f842ee1d17dea09f9c5f5a44adea64b680529fc311a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B6%2C%22413f4df5-6212-4e69-84be-3a846c01ac0d%22%2C2592000%5D%22%3B%7D; PHPSESSID=uno496ge780fmu506kq5vpcmq5; _csrf=1ca60ee6b31c204738c1bd932a13bf1ba6855a770145f1077ef770777811ac89a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%C9%D5cU%2F%D5%DD%DA%03%EE%9Ax%12%A3%2C%C4%FE%A1a%0A_%2C%3B%AC%84%D5%EDw%13%03%B4-%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.179.69'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '50885'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fauth%2Flogin'
+    'REQUEST_URI' => '/index.php?r=user%2Fauth%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526454592.419
+    'REQUEST_TIME' => 1526454592
+]
+2018-05-16 09:10:36 [147.210.179.69][-][uno496ge780fmu506kq5vpcmq5][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host mtaoutliste.u-bordeaux.fr [No route to host #113] in /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:268
+Stack trace:
+#0 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /var/www/humhub/protected/vendor/yiisoft/yii2-swiftmailer/Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMailer.php(262): yii\swiftmailer\Mailer->sendMessage(Object(humhub\components\mail\Message))
+#5 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMessage.php(48): yii\mail\BaseMailer->send(Object(humhub\components\mail\Message))
+#6 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(137): yii\mail\BaseMessage->send()
+#7 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(110): humhub\modules\user\models\Invite->sendInviteMail()
+#8 /var/www/humhub/protected/humhub/modules/user/controllers/AuthController.php(80): humhub\modules\user\models\Invite->selfInvite()
+#9 [internal function]: humhub\modules\user\controllers\AuthController->actionLogin()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('user/auth/login', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-16 09:10:28 [147.210.179.69][-][uno496ge780fmu506kq5vpcmq5][info][application] $_GET = [
+    'r' => 'user/auth/login'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'ec91f571387909fa03066adb6b4baec9d4a0104918157fecd35715e1680eb7f9'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=user%2Fauth%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '141'
+    'HTTP_COOKIE' => '_wub_saml_sp=aHR0cHM6Ly9ndzUuaW5mcmEudW5pdi1ib3JkZWF1eC5mci9zaGliYm9sZXRo; _wub_saml_idp=aHR0cHM6Ly9pZHAudW5pdi1wYXUuZnIvaWRwL3NoaWJib2xldGg%3D+aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; language=4fdd3236b9d80f4ed566cd32ae8a0fc137c3c76e113d64a0f7abcdca7fa131dda%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _identity=f8c767d1266b05aa7358c3f842ee1d17dea09f9c5f5a44adea64b680529fc311a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B6%2C%22413f4df5-6212-4e69-84be-3a846c01ac0d%22%2C2592000%5D%22%3B%7D; PHPSESSID=uno496ge780fmu506kq5vpcmq5; _csrf=1ca60ee6b31c204738c1bd932a13bf1ba6855a770145f1077ef770777811ac89a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%C9%D5cU%2F%D5%DD%DA%03%EE%9Ax%12%A3%2C%C4%FE%A1a%0A_%2C%3B%AC%84%D5%EDw%13%03%B4-%22%3B%7D'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.179.69'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '50903'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fauth%2Flogin'
+    'REQUEST_URI' => '/index.php?r=user%2Fauth%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526454628.236
+    'REQUEST_TIME' => 1526454628
+]
+2018-05-16 10:32:57 [147.210.89.197][1][btj4fmevmepngd9fgj3tlg6qi5][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host mtaoutliste.u-bordeaux.fr [No route to host #113] in /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:268
+Stack trace:
+#0 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /var/www/humhub/protected/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /var/www/humhub/protected/vendor/yiisoft/yii2-swiftmailer/Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMailer.php(262): yii\swiftmailer\Mailer->sendMessage(Object(humhub\components\mail\Message))
+#5 /var/www/humhub/protected/vendor/yiisoft/yii2/mail/BaseMessage.php(48): yii\mail\BaseMailer->send(Object(humhub\components\mail\Message))
+#6 /var/www/humhub/protected/humhub/modules/user/models/Invite.php(180): yii\mail\BaseMessage->send()
+#7 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(87): humhub\modules\user\models\Invite->sendInviteMail()
+#8 /var/www/humhub/protected/humhub/modules/user/controllers/InviteController.php(57): humhub\modules\user\controllers\InviteController->createInvite('jdfjhds@kjdfq.f...')
+#9 [internal function]: humhub\modules\user\controllers\InviteController->actionIndex()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('user/invite', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-16 10:32:49 [147.210.89.197][1][btj4fmevmepngd9fgj3tlg6qi5][info][application] $_GET = [
+    'r' => 'user/invite'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '5af84f840368fc718ce02c764018a21c856d4a735f842fc58d80859af7d68061'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '136'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'https://ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'O2t9PhAAmB-RY_xv5wbJliK0DhWFB9IxN1yQacMKpP2kghKFK_FnhDYJqcY5D-j6ZRypOjQSzKCYOjj8VUYZpA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=admin%2Fuser'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; _gid=GA1.2.2027993348.1526370430; _csrf=caf299960d5628692eb28b0baa8b2fe06c922662fc1cdd76d7761dcc82e9fc40a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%9F%E9o%BB%3B%F1%FF%9B%A7jU%A9%DE%09%21lG%A8%A7%2F%B1%15%1E%91%AFf%A8%95%96L%BDY%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D; PHPSESSID=btj4fmevmepngd9fgj3tlg6qi5'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '50451'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Finvite'
+    'REQUEST_URI' => '/index.php?r=user%2Finvite'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526459569.256
+    'REQUEST_TIME' => 1526459569
+]
+2018-05-17 14:01:07 [147.210.89.197][1][-][error][application] Could not get document server response! Error in cURL request: <url> malformed
+2018-05-17 14:01:07 [147.210.89.197][1][-][info][application] $_GET = [
+    'r' => 'onlydocuments/admin'
+    '_pjax' => '#layout-content'
+    '_' => '1526558456578'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '24cd25497afa66724adc826f71591215162f0e95e5cf903705d0101f38eed446'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'IT-INLuqCP16KJiLf5rVbGJKhqUmrJDg6kCi5gNToyNG-K4UB-Fpw-4CRK3cKigqM6zUICLzfKncE64vcOR39w=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=admin%2Fmodule%2Flist'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _csrf=dc0763da1e16c90bf4b6e02a5af4b0fdb577c53292b86c77cd94860ef3788229a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22g%C7%26+%BCKa%3E%94%2A%DC%26%A3%B0%FDFQ%E6R%85%04_%ECI6S%0C%C9s%B7%D4%D4%22%3B%7D; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; pm_new-spaces-panel=expanded; pm_spaces-statistics-panel=expanded; _gid=GA1.2.1334414093.1526549448; PHPSESSID=0chhk4s9frjum2s4oc9dqf11d2'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '59033'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1526558456578'
+    'REQUEST_URI' => '/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1526558456578'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1526558467.377
+    'REQUEST_TIME' => 1526558467
+]
+2018-05-24 09:00:15 [147.210.89.197][1][-][error][application] Could not get document server response! Error in cURL request: <url> malformed
+2018-05-24 09:00:15 [147.210.89.197][1][-][info][application] $_GET = [
+    'r' => 'onlydocuments/admin'
+    '_pjax' => '#layout-content'
+    '_' => '1527145202112'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '7a3af505d8d2de3c8c09430e27c5a9560ce78f460267f1360559f9c9235c2d80'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'hCDRGERWzh8kN7eW5yxrgIgZT_k2v2GwLZRu1gIB70C1vWmiz6kehMl8J683aT3vfuowb33tHQbazZKRnlXl1g=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=admin%2Fmodule%2Flist'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _wub_saml_sp=aHR0cHM6Ly9hc3Npc3RhbmNlLnUtYm9yZGVhdXguZnI%3D; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D; PHPSESSID=8l0bmjgqdfe245fk6amec24d23; _csrf=938e8002ea4b30827be01828803d0201de2e3f66e3c0efc67b6bf14369c1c052a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221%9D%B8%BA%8B%FF%D0%9B%EDK%909%D0EVo%F6%F3%7F%96KR%7C%B6%F7Y%FCG%9CT%0A%96%22%3B%7D; pm_getting-started-panel=expanded'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '49994'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527145202112'
+    'REQUEST_URI' => '/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527145202112'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527145215.35
+    'REQUEST_TIME' => 1527145215
+]
+2018-05-24 11:14:40 [147.210.89.197][1][-][error][application] Could not get document server response! Error in cURL request: <url> malformed
+2018-05-24 11:14:40 [147.210.89.197][1][-][info][application] $_GET = [
+    'r' => 'onlydocuments/admin'
+    '_pjax' => '#layout-content'
+    '_' => '1527151286393'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '73aa22a64f7ba7dc4eceff6838bb61822f81fbe90ddfefd22f990f36e8a5bd7e'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=admin%2Fmodule%2Flist'
+    'HTTP_X_CSRF_TOKEN' => 'I1eRTOcPswYBhKSAv1fZO77jQl4jLUEstiFdZToc1xGXQQuLFlCH2tN3lTNk1AbR-NxFeRP4Hknq-waauT2KNQ=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'PHPSESSID=6v6bhg5rmvafvjs06cmlku93g1; _csrf=f73f651beac01365897c29787cfe95bb1682a8d1eff48746cd045324b32a55e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B4%16%9A%C7%F1_4%DC%D2%F31%B3%DB%83%DF%EAF%3F%07%270%D5_e%5C%DA%5B%FF%83%21%5D%24%22%3B%7D; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_profile-friends-panel=expanded; pm_profile-following-panel=expanded'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '51696'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'REQUEST_URI' => '/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527153280.417
+    'REQUEST_TIME' => 1527153280
+]
+2018-05-24 11:14:49 [147.210.89.197][1][-][error][application] Could not get document server response! Syntax error.
+2018-05-24 11:14:49 [147.210.89.197][1][-][info][application] $_GET = [
+    'r' => 'onlydocuments/admin'
+    '_pjax' => '#layout-content'
+    '_' => '1527151286393'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '73aa22a64f7ba7dc4eceff6838bb61822f81fbe90ddfefd22f990f36e8a5bd7e'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=onlydocuments%2Fadmin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '150'
+    'HTTP_COOKIE' => 'PHPSESSID=6v6bhg5rmvafvjs06cmlku93g1; _csrf=f73f651beac01365897c29787cfe95bb1682a8d1eff48746cd045324b32a55e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B4%16%9A%C7%F1_4%DC%D2%F31%B3%DB%83%DF%EAF%3F%07%270%D5_e%5C%DA%5B%FF%83%21%5D%24%22%3B%7D; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_profile-friends-panel=expanded; pm_profile-following-panel=expanded'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '51703'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'REQUEST_URI' => '/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527153289.203
+    'REQUEST_TIME' => 1527153289
+]
+2018-05-24 11:15:01 [147.210.89.197][1][-][error][application] Could not get document server response! Error in cURL request: <url> malformed
+2018-05-24 11:15:01 [147.210.89.197][1][-][info][application] $_GET = [
+    'r' => 'onlydocuments/admin'
+    '_pjax' => '#layout-content'
+    '_' => '1527151286393'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '73aa22a64f7ba7dc4eceff6838bb61822f81fbe90ddfefd22f990f36e8a5bd7e'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '137'
+    'HTTP_COOKIE' => 'PHPSESSID=6v6bhg5rmvafvjs06cmlku93g1; _csrf=f73f651beac01365897c29787cfe95bb1682a8d1eff48746cd045324b32a55e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B4%16%9A%C7%F1_4%DC%D2%F31%B3%DB%83%DF%EAF%3F%07%270%D5_e%5C%DA%5B%FF%83%21%5D%24%22%3B%7D; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_profile-friends-panel=expanded; pm_profile-following-panel=expanded'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '51706'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'REQUEST_URI' => '/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527153301.054
+    'REQUEST_TIME' => 1527153301
+]
+2018-05-24 11:15:42 [147.210.89.197][1][-][error][application] Could not get document server response! Error in cURL request: <url> malformed
+2018-05-24 11:15:42 [147.210.89.197][1][-][info][application] $_GET = [
+    'r' => 'onlydocuments/admin'
+    '_pjax' => '#layout-content'
+    '_' => '1527151286393'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '73aa22a64f7ba7dc4eceff6838bb61822f81fbe90ddfefd22f990f36e8a5bd7e'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '154'
+    'HTTP_COOKIE' => 'PHPSESSID=6v6bhg5rmvafvjs06cmlku93g1; _csrf=f73f651beac01365897c29787cfe95bb1682a8d1eff48746cd045324b32a55e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B4%16%9A%C7%F1_4%DC%D2%F31%B3%DB%83%DF%EAF%3F%07%270%D5_e%5C%DA%5B%FF%83%21%5D%24%22%3B%7D; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_profile-friends-panel=expanded; pm_profile-following-panel=expanded'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '51811'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'REQUEST_URI' => '/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527153342.707
+    'REQUEST_TIME' => 1527153342
+]
+2018-05-24 11:15:49 [147.210.89.197][1][-][error][application] Could not get document server response! Error in cURL request: <url> malformed
+2018-05-24 11:15:49 [147.210.89.197][1][-][info][application] $_GET = [
+    'r' => 'onlydocuments/admin'
+    '_pjax' => '#layout-content'
+    '_' => '1527151286393'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '73aa22a64f7ba7dc4eceff6838bb61822f81fbe90ddfefd22f990f36e8a5bd7e'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '149'
+    'HTTP_COOKIE' => 'PHPSESSID=6v6bhg5rmvafvjs06cmlku93g1; _csrf=f73f651beac01365897c29787cfe95bb1682a8d1eff48746cd045324b32a55e0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B4%16%9A%C7%F1_4%DC%D2%F31%B3%DB%83%DF%EAF%3F%07%270%D5_e%5C%DA%5B%FF%83%21%5D%24%22%3B%7D; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D; pm_getting-started-panel=expanded; pm_space-members-panel=expanded; pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_profile-friends-panel=expanded; pm_profile-following-panel=expanded'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '51813'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'REQUEST_URI' => '/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527151286393'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527153349.226
+    'REQUEST_TIME' => 1527153349
+]
+2018-05-24 11:16:42 [147.210.89.197][1][-][error][application] Could not get document server response! Error in cURL request: <url> malformed
+2018-05-24 11:16:42 [147.210.89.197][1][-][info][application] $_GET = [
+    'r' => 'onlydocuments/admin'
+    '_pjax' => '#layout-content'
+    '_' => '1527145202112'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'b9cf13f3753abcb4513eb1396d8973c5efbe42e4b032ac05fbeb4d7b7e541d62'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '252'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'https://ulab.u-bordeaux.fr'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=onlydocuments%2Fadmin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _wub_saml_sp=aHR0cHM6Ly9hc3Npc3RhbmNlLnUtYm9yZGVhdXguZnI%3D; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D; PHPSESSID=8l0bmjgqdfe245fk6amec24d23; _csrf=938e8002ea4b30827be01828803d0201de2e3f66e3c0efc67b6bf14369c1c052a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221%9D%B8%BA%8B%FF%D0%9B%EDK%909%D0EVo%F6%F3%7F%96KR%7C%B6%F7Y%FCG%9CT%0A%96%22%3B%7D; pm_getting-started-panel=expanded'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '51836'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527145202112'
+    'REQUEST_URI' => '/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527145202112'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527153402.741
+    'REQUEST_TIME' => 1527153402
+]
+2018-05-24 11:16:54 [147.210.89.197][1][-][error][application] Could not get document server response! Error in cURL request: <url> malformed
+2018-05-24 11:16:54 [147.210.89.197][1][-][info][application] $_GET = [
+    'r' => 'onlydocuments/admin'
+    '_pjax' => '#layout-content'
+    '_' => '1527145202112'
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => 'b9cf13f3753abcb4513eb1396d8973c5efbe42e4b032ac05fbeb4d7b7e541d62'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '149'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'https://ulab.u-bordeaux.fr'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527145202112'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1227620699.1524209856; _wub_saml_idp=aHR0cHM6Ly9pZHAtdWJ4LnUtYm9yZGVhdXguZnIvaWRwL3NoaWJib2xldGg%3D; _wub_redirection_state=checked; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _wub_saml_sp=aHR0cHM6Ly9hc3Npc3RhbmNlLnUtYm9yZGVhdXguZnI%3D; _identity=5965cd4ef387b9c8459d6e538b2aa876e8fd3bacad773ef3ccd97409942938c4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22dc2a4fd2-ea97-4db9-845b-e9978164aecd%22%2C2592000%5D%22%3B%7D; PHPSESSID=8l0bmjgqdfe245fk6amec24d23; _csrf=938e8002ea4b30827be01828803d0201de2e3f66e3c0efc67b6bf14369c1c052a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221%9D%B8%BA%8B%FF%D0%9B%EDK%909%D0EVo%F6%F3%7F%96KR%7C%B6%F7Y%FCG%9CT%0A%96%22%3B%7D; pm_getting-started-panel=expanded'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.89.197'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '51846'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527145202112'
+    'REQUEST_URI' => '/index.php?r=onlydocuments%2Fadmin&_pjax=%23layout-content&_=1527145202112'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527153414.881
+    'REQUEST_TIME' => 1527153414
+]
+2018-05-29 14:38:51 [147.210.245.181][4][-][error][application] yii\base\ErrorException: Trying to get property of non-object in /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php:36
+Stack trace:
+#0 /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php(36): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/humhub...', 36, Array)
+#1 /var/www/humhub/protected/humhub/components/SocialActivity.php(148): humhub\modules\user\activities\UserFollow->getUrl()
+#2 /var/www/humhub/protected/humhub/modules/activity/components/BaseActivity.php(63): humhub\components\SocialActivity->getViewParams(Array)
+#3 /var/www/humhub/protected/humhub/components/rendering/LayoutRenderer.php(49): humhub\modules\activity\components\BaseActivity->getViewParams(Array)
+#4 /var/www/humhub/protected/humhub/modules/activity/components/ActivityWebRenderer.php(52): humhub\components\rendering\LayoutRenderer->render(Object(humhub\modules\user\activities\UserFollow), Array)
+#5 /var/www/humhub/protected/humhub/modules/activity/models/Activity.php(116): humhub\modules\activity\components\ActivityWebRenderer->render(Object(humhub\modules\user\activities\UserFollow))
+#6 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(324): humhub\modules\activity\models\Activity->getWallOut(Array)
+#7 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(358): humhub\modules\stream\actions\Stream::renderEntry(Object(humhub\modules\activity\models\Activity), Array)
+#8 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(233): humhub\modules\stream\actions\Stream::getContentResultEntry(Object(humhub\modules\content\models\Content))
+#9 [internal function]: humhub\modules\stream\actions\Stream->run()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('stream', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('dashboard/dashb...', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-29 14:38:51 [147.210.245.181][4][-][info][application] $_GET = [
+    'r' => 'dashboard/dashboard/stream'
+    'mode' => 'activity'
+    'StreamQuery' => [
+        'sort' => 'u'
+        'from' => '0'
+        'limit' => '10'
+        'suppressionsOnly' => 'false'
+    ]
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES256-GCM-SHA384'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '256'
+    'SSL_CIPHER_ALGKEYSIZE' => '256'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '15388d40d41e4c3e88e98180490c40ad7c79dd723793b38b47a62272ede7fcdb'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'szZYgYWyJgQloN59Lln3SS9zCyCAXX7JIvFqqzNi86-AMWBRQdwnBRDpC_Q2l_BfrVLQLbzJZTMV8KyWaLZ6MA=='
+    'HTTP_ACCEPT_LANGUAGE' => 'fr-fr'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=386rt6f86slbfjaijv782mk5n0; _identity=f37410ec4ab5b96e37b26d0fbdeec4d05a3aef9122c1650e16cd807aa1114796a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B4%2C%226ff5a5b1-1ad8-4415-8f64-5a5474bf48b3%22%2C2592000%5D%22%3B%7D; _csrf=9caca25f533c6cd1106d2a781f942281feb8c6c8768fa4ebe854c4580977e8f2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%223%078%D0%C4n%01%015I%D5%89%18%CE%07%16%82%21%DB%0D%3C%94%1B%FA7%01%C6%3D%5B%D4%89%9F%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=dashboard%2Fdashboard'
+    'HTTP_DNT' => '1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.245.181'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '54438'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'REQUEST_URI' => '/index.php?r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527597531.777
+    'REQUEST_TIME' => 1527597531
+]
+2018-05-29 14:46:20 [147.210.245.181][4][-][error][application] yii\base\ErrorException: Trying to get property of non-object in /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php:36
+Stack trace:
+#0 /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php(36): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/humhub...', 36, Array)
+#1 /var/www/humhub/protected/humhub/components/SocialActivity.php(148): humhub\modules\user\activities\UserFollow->getUrl()
+#2 /var/www/humhub/protected/humhub/modules/activity/components/BaseActivity.php(63): humhub\components\SocialActivity->getViewParams(Array)
+#3 /var/www/humhub/protected/humhub/components/rendering/LayoutRenderer.php(49): humhub\modules\activity\components\BaseActivity->getViewParams(Array)
+#4 /var/www/humhub/protected/humhub/modules/activity/components/ActivityWebRenderer.php(52): humhub\components\rendering\LayoutRenderer->render(Object(humhub\modules\user\activities\UserFollow), Array)
+#5 /var/www/humhub/protected/humhub/modules/activity/models/Activity.php(116): humhub\modules\activity\components\ActivityWebRenderer->render(Object(humhub\modules\user\activities\UserFollow))
+#6 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(324): humhub\modules\activity\models\Activity->getWallOut(Array)
+#7 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(358): humhub\modules\stream\actions\Stream::renderEntry(Object(humhub\modules\activity\models\Activity), Array)
+#8 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(233): humhub\modules\stream\actions\Stream::getContentResultEntry(Object(humhub\modules\content\models\Content))
+#9 [internal function]: humhub\modules\stream\actions\Stream->run()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('stream', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('dashboard/dashb...', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-29 14:46:20 [147.210.245.181][4][-][info][application] $_GET = [
+    'r' => 'dashboard/dashboard/stream'
+    'mode' => 'activity'
+    'StreamQuery' => [
+        'sort' => 'u'
+        'from' => '0'
+        'limit' => '10'
+        'suppressionsOnly' => 'false'
+    ]
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES256-GCM-SHA384'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '256'
+    'SSL_CIPHER_ALGKEYSIZE' => '256'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '045589b624275b57f6754b799edee79d073381d45188194a4bfe7d99bfd98a52'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'fTeXVmNl-aXcoW7i5E2QJYXeDbEvl3FieAJAg5KagqVOMK-Gpwv4pOnou2v8g5czB__WvBMDaphPA4a-yU4LOg=='
+    'HTTP_ACCEPT_LANGUAGE' => 'fr-fr'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=jgchmabstp0c4mvsifeut4pvr7; _identity=f37410ec4ab5b96e37b26d0fbdeec4d05a3aef9122c1650e16cd807aa1114796a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B4%2C%226ff5a5b1-1ad8-4415-8f64-5a5474bf48b3%22%2C2592000%5D%22%3B%7D; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; pm_getting-started-panel=expanded; _csrf=9caca25f533c6cd1106d2a781f942281feb8c6c8768fa4ebe854c4580977e8f2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%223%078%D0%C4n%01%015I%D5%89%18%CE%07%16%82%21%DB%0D%3C%94%1B%FA7%01%C6%3D%5B%D4%89%9F%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=dashboard%2Fdashboard'
+    'HTTP_DNT' => '1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.245.181'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '55132'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'REQUEST_URI' => '/index.php?r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527597980.664
+    'REQUEST_TIME' => 1527597980
+]
+2018-05-29 15:36:13 [147.210.245.181][4][-][error][application] yii\base\ErrorException: Trying to get property of non-object in /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php:36
+Stack trace:
+#0 /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php(36): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/humhub...', 36, Array)
+#1 /var/www/humhub/protected/humhub/components/SocialActivity.php(148): humhub\modules\user\activities\UserFollow->getUrl()
+#2 /var/www/humhub/protected/humhub/modules/activity/components/BaseActivity.php(63): humhub\components\SocialActivity->getViewParams(Array)
+#3 /var/www/humhub/protected/humhub/components/rendering/LayoutRenderer.php(49): humhub\modules\activity\components\BaseActivity->getViewParams(Array)
+#4 /var/www/humhub/protected/humhub/modules/activity/components/ActivityWebRenderer.php(52): humhub\components\rendering\LayoutRenderer->render(Object(humhub\modules\user\activities\UserFollow), Array)
+#5 /var/www/humhub/protected/humhub/modules/activity/models/Activity.php(116): humhub\modules\activity\components\ActivityWebRenderer->render(Object(humhub\modules\user\activities\UserFollow))
+#6 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(324): humhub\modules\activity\models\Activity->getWallOut(Array)
+#7 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(358): humhub\modules\stream\actions\Stream::renderEntry(Object(humhub\modules\activity\models\Activity), Array)
+#8 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(233): humhub\modules\stream\actions\Stream::getContentResultEntry(Object(humhub\modules\content\models\Content))
+#9 [internal function]: humhub\modules\stream\actions\Stream->run()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('stream', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('dashboard/dashb...', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-29 15:36:13 [147.210.245.181][4][-][info][application] $_GET = [
+    'r' => 'dashboard/dashboard/stream'
+    'mode' => 'activity'
+    'StreamQuery' => [
+        'sort' => 'u'
+        'from' => '0'
+        'limit' => '10'
+        'suppressionsOnly' => 'false'
+    ]
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES256-GCM-SHA384'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '256'
+    'SSL_CIPHER_ALGKEYSIZE' => '256'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '27c49403dfe8b8bad3feeff2e5ffa35a2f3d75ed49e8b92db411ca97539265a4'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'rgUyAWDOJiH7tWJuXt-NuGo1wFNvrpv8YSSLGOjj7WydAgrRpKAnIM78t-dGEYqu6BQbXlM6gAZWJU0lszdk8w=='
+    'HTTP_ACCEPT_LANGUAGE' => 'fr-fr'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity=f37410ec4ab5b96e37b26d0fbdeec4d05a3aef9122c1650e16cd807aa1114796a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B4%2C%226ff5a5b1-1ad8-4415-8f64-5a5474bf48b3%22%2C2592000%5D%22%3B%7D; pm_profile-following-panel=expanded; pm_profile-friends-panel=expanded; pm_user-spaces-panel=expanded; pm_user-tags-panel=expanded; PHPSESSID=jgchmabstp0c4mvsifeut4pvr7; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; pm_getting-started-panel=expanded; _csrf=9caca25f533c6cd1106d2a781f942281feb8c6c8768fa4ebe854c4580977e8f2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%223%078%D0%C4n%01%015I%D5%89%18%CE%07%16%82%21%DB%0D%3C%94%1B%FA7%01%C6%3D%5B%D4%89%9F%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=dashboard%2Fdashboard'
+    'HTTP_DNT' => '1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.245.181'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '56790'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'REQUEST_URI' => '/index.php?r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527600973.518
+    'REQUEST_TIME' => 1527600973
+]
+2018-05-29 15:36:14 [147.210.245.181][4][-][error][application] yii\base\ErrorException: Trying to get property of non-object in /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php:36
+Stack trace:
+#0 /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php(36): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/humhub...', 36, Array)
+#1 /var/www/humhub/protected/humhub/components/SocialActivity.php(148): humhub\modules\user\activities\UserFollow->getUrl()
+#2 /var/www/humhub/protected/humhub/modules/activity/components/BaseActivity.php(63): humhub\components\SocialActivity->getViewParams(Array)
+#3 /var/www/humhub/protected/humhub/components/rendering/LayoutRenderer.php(49): humhub\modules\activity\components\BaseActivity->getViewParams(Array)
+#4 /var/www/humhub/protected/humhub/modules/activity/components/ActivityWebRenderer.php(52): humhub\components\rendering\LayoutRenderer->render(Object(humhub\modules\user\activities\UserFollow), Array)
+#5 /var/www/humhub/protected/humhub/modules/activity/models/Activity.php(116): humhub\modules\activity\components\ActivityWebRenderer->render(Object(humhub\modules\user\activities\UserFollow))
+#6 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(324): humhub\modules\activity\models\Activity->getWallOut(Array)
+#7 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(358): humhub\modules\stream\actions\Stream::renderEntry(Object(humhub\modules\activity\models\Activity), Array)
+#8 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(233): humhub\modules\stream\actions\Stream::getContentResultEntry(Object(humhub\modules\content\models\Content))
+#9 [internal function]: humhub\modules\stream\actions\Stream->run()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('stream', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('dashboard/dashb...', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-29 15:36:14 [147.210.245.181][4][-][info][application] $_GET = [
+    'r' => 'dashboard/dashboard/stream'
+    'mode' => 'activity'
+    'StreamQuery' => [
+        'sort' => 'u'
+        'from' => '0'
+        'limit' => '10'
+        'suppressionsOnly' => 'false'
+    ]
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES256-GCM-SHA384'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '256'
+    'SSL_CIPHER_ALGKEYSIZE' => '256'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '27c49403dfe8b8bad3feeff2e5ffa35a2f3d75ed49e8b92db411ca97539265a4'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'rgUyAWDOJiH7tWJuXt-NuGo1wFNvrpv8YSSLGOjj7WydAgrRpKAnIM78t-dGEYqu6BQbXlM6gAZWJU0lszdk8w=='
+    'HTTP_ACCEPT_LANGUAGE' => 'fr-fr'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity=f37410ec4ab5b96e37b26d0fbdeec4d05a3aef9122c1650e16cd807aa1114796a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B4%2C%226ff5a5b1-1ad8-4415-8f64-5a5474bf48b3%22%2C2592000%5D%22%3B%7D; pm_profile-following-panel=expanded; pm_profile-friends-panel=expanded; pm_user-spaces-panel=expanded; pm_user-tags-panel=expanded; PHPSESSID=jgchmabstp0c4mvsifeut4pvr7; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; pm_getting-started-panel=expanded; _csrf=9caca25f533c6cd1106d2a781f942281feb8c6c8768fa4ebe854c4580977e8f2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%223%078%D0%C4n%01%015I%D5%89%18%CE%07%16%82%21%DB%0D%3C%94%1B%FA7%01%C6%3D%5B%D4%89%9F%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=dashboard%2Fdashboard'
+    'HTTP_DNT' => '1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.245.181'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '56790'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'REQUEST_URI' => '/index.php?r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527600974.033
+    'REQUEST_TIME' => 1527600974
+]
+2018-05-29 15:36:14 [147.210.245.181][4][-][error][application] yii\base\ErrorException: Trying to get property of non-object in /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php:36
+Stack trace:
+#0 /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php(36): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/humhub...', 36, Array)
+#1 /var/www/humhub/protected/humhub/components/SocialActivity.php(148): humhub\modules\user\activities\UserFollow->getUrl()
+#2 /var/www/humhub/protected/humhub/modules/activity/components/BaseActivity.php(63): humhub\components\SocialActivity->getViewParams(Array)
+#3 /var/www/humhub/protected/humhub/components/rendering/LayoutRenderer.php(49): humhub\modules\activity\components\BaseActivity->getViewParams(Array)
+#4 /var/www/humhub/protected/humhub/modules/activity/components/ActivityWebRenderer.php(52): humhub\components\rendering\LayoutRenderer->render(Object(humhub\modules\user\activities\UserFollow), Array)
+#5 /var/www/humhub/protected/humhub/modules/activity/models/Activity.php(116): humhub\modules\activity\components\ActivityWebRenderer->render(Object(humhub\modules\user\activities\UserFollow))
+#6 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(324): humhub\modules\activity\models\Activity->getWallOut(Array)
+#7 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(358): humhub\modules\stream\actions\Stream::renderEntry(Object(humhub\modules\activity\models\Activity), Array)
+#8 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(233): humhub\modules\stream\actions\Stream::getContentResultEntry(Object(humhub\modules\content\models\Content))
+#9 [internal function]: humhub\modules\stream\actions\Stream->run()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('stream', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('dashboard/dashb...', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-29 15:36:14 [147.210.245.181][4][-][info][application] $_GET = [
+    'r' => 'dashboard/dashboard/stream'
+    'mode' => 'activity'
+    'StreamQuery' => [
+        'sort' => 'u'
+        'from' => '0'
+        'limit' => '10'
+        'suppressionsOnly' => 'false'
+    ]
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES256-GCM-SHA384'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '256'
+    'SSL_CIPHER_ALGKEYSIZE' => '256'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '27c49403dfe8b8bad3feeff2e5ffa35a2f3d75ed49e8b92db411ca97539265a4'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'rgUyAWDOJiH7tWJuXt-NuGo1wFNvrpv8YSSLGOjj7WydAgrRpKAnIM78t-dGEYqu6BQbXlM6gAZWJU0lszdk8w=='
+    'HTTP_ACCEPT_LANGUAGE' => 'fr-fr'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity=f37410ec4ab5b96e37b26d0fbdeec4d05a3aef9122c1650e16cd807aa1114796a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B4%2C%226ff5a5b1-1ad8-4415-8f64-5a5474bf48b3%22%2C2592000%5D%22%3B%7D; pm_profile-following-panel=expanded; pm_profile-friends-panel=expanded; pm_user-spaces-panel=expanded; pm_user-tags-panel=expanded; PHPSESSID=jgchmabstp0c4mvsifeut4pvr7; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; pm_getting-started-panel=expanded; _csrf=9caca25f533c6cd1106d2a781f942281feb8c6c8768fa4ebe854c4580977e8f2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%223%078%D0%C4n%01%015I%D5%89%18%CE%07%16%82%21%DB%0D%3C%94%1B%FA7%01%C6%3D%5B%D4%89%9F%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=dashboard%2Fdashboard'
+    'HTTP_DNT' => '1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.245.181'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '56790'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'REQUEST_URI' => '/index.php?r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527600974.605
+    'REQUEST_TIME' => 1527600974
+]
+2018-05-29 15:36:14 [147.210.245.181][4][-][error][application] yii\base\ErrorException: Trying to get property of non-object in /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php:36
+Stack trace:
+#0 /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php(36): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/humhub...', 36, Array)
+#1 /var/www/humhub/protected/humhub/components/SocialActivity.php(148): humhub\modules\user\activities\UserFollow->getUrl()
+#2 /var/www/humhub/protected/humhub/modules/activity/components/BaseActivity.php(63): humhub\components\SocialActivity->getViewParams(Array)
+#3 /var/www/humhub/protected/humhub/components/rendering/LayoutRenderer.php(49): humhub\modules\activity\components\BaseActivity->getViewParams(Array)
+#4 /var/www/humhub/protected/humhub/modules/activity/components/ActivityWebRenderer.php(52): humhub\components\rendering\LayoutRenderer->render(Object(humhub\modules\user\activities\UserFollow), Array)
+#5 /var/www/humhub/protected/humhub/modules/activity/models/Activity.php(116): humhub\modules\activity\components\ActivityWebRenderer->render(Object(humhub\modules\user\activities\UserFollow))
+#6 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(324): humhub\modules\activity\models\Activity->getWallOut(Array)
+#7 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(358): humhub\modules\stream\actions\Stream::renderEntry(Object(humhub\modules\activity\models\Activity), Array)
+#8 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(233): humhub\modules\stream\actions\Stream::getContentResultEntry(Object(humhub\modules\content\models\Content))
+#9 [internal function]: humhub\modules\stream\actions\Stream->run()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('stream', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('dashboard/dashb...', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-29 15:36:14 [147.210.245.181][4][-][info][application] $_GET = [
+    'r' => 'dashboard/dashboard/stream'
+    'mode' => 'activity'
+    'StreamQuery' => [
+        'sort' => 'u'
+        'from' => '0'
+        'limit' => '10'
+        'suppressionsOnly' => 'false'
+    ]
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES256-GCM-SHA384'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '256'
+    'SSL_CIPHER_ALGKEYSIZE' => '256'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '27c49403dfe8b8bad3feeff2e5ffa35a2f3d75ed49e8b92db411ca97539265a4'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'rgUyAWDOJiH7tWJuXt-NuGo1wFNvrpv8YSSLGOjj7WydAgrRpKAnIM78t-dGEYqu6BQbXlM6gAZWJU0lszdk8w=='
+    'HTTP_ACCEPT_LANGUAGE' => 'fr-fr'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity=f37410ec4ab5b96e37b26d0fbdeec4d05a3aef9122c1650e16cd807aa1114796a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B4%2C%226ff5a5b1-1ad8-4415-8f64-5a5474bf48b3%22%2C2592000%5D%22%3B%7D; pm_profile-following-panel=expanded; pm_profile-friends-panel=expanded; pm_user-spaces-panel=expanded; pm_user-tags-panel=expanded; PHPSESSID=jgchmabstp0c4mvsifeut4pvr7; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; pm_getting-started-panel=expanded; _csrf=9caca25f533c6cd1106d2a781f942281feb8c6c8768fa4ebe854c4580977e8f2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%223%078%D0%C4n%01%015I%D5%89%18%CE%07%16%82%21%DB%0D%3C%94%1B%FA7%01%C6%3D%5B%D4%89%9F%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=dashboard%2Fdashboard'
+    'HTTP_DNT' => '1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.245.181'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '56790'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'REQUEST_URI' => '/index.php?r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527600974.76
+    'REQUEST_TIME' => 1527600974
+]
+2018-05-29 15:39:37 [147.210.245.181][4][-][error][application] yii\base\ErrorException: Trying to get property of non-object in /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php:36
+Stack trace:
+#0 /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php(36): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/humhub...', 36, Array)
+#1 /var/www/humhub/protected/humhub/components/SocialActivity.php(148): humhub\modules\user\activities\UserFollow->getUrl()
+#2 /var/www/humhub/protected/humhub/modules/activity/components/BaseActivity.php(63): humhub\components\SocialActivity->getViewParams(Array)
+#3 /var/www/humhub/protected/humhub/components/rendering/LayoutRenderer.php(49): humhub\modules\activity\components\BaseActivity->getViewParams(Array)
+#4 /var/www/humhub/protected/humhub/modules/activity/components/ActivityWebRenderer.php(52): humhub\components\rendering\LayoutRenderer->render(Object(humhub\modules\user\activities\UserFollow), Array)
+#5 /var/www/humhub/protected/humhub/modules/activity/models/Activity.php(116): humhub\modules\activity\components\ActivityWebRenderer->render(Object(humhub\modules\user\activities\UserFollow))
+#6 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(324): humhub\modules\activity\models\Activity->getWallOut(Array)
+#7 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(358): humhub\modules\stream\actions\Stream::renderEntry(Object(humhub\modules\activity\models\Activity), Array)
+#8 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(233): humhub\modules\stream\actions\Stream::getContentResultEntry(Object(humhub\modules\content\models\Content))
+#9 [internal function]: humhub\modules\stream\actions\Stream->run()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('stream', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('dashboard/dashb...', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-29 15:39:37 [147.210.245.181][4][-][info][application] $_GET = [
+    'r' => 'dashboard/dashboard/stream'
+    'mode' => 'activity'
+    'StreamQuery' => [
+        'sort' => 'u'
+        'from' => '0'
+        'limit' => '10'
+        'suppressionsOnly' => 'false'
+    ]
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES256-GCM-SHA384'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '256'
+    'SSL_CIPHER_ALGKEYSIZE' => '256'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_ID' => '871f9083e17e0510df67d98fca941d81ceb34f93bc27bf02ccb3796f16b7f646'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_X_CSRF_TOKEN' => 'rgUyAWDOJiH7tWJuXt-NuGo1wFNvrpv8YSSLGOjj7WydAgrRpKAnIM78t-dGEYqu6BQbXlM6gAZWJU0lszdk8w=='
+    'HTTP_ACCEPT_LANGUAGE' => 'fr-fr'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity=f37410ec4ab5b96e37b26d0fbdeec4d05a3aef9122c1650e16cd807aa1114796a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B4%2C%226ff5a5b1-1ad8-4415-8f64-5a5474bf48b3%22%2C2592000%5D%22%3B%7D; pm_profile-following-panel=expanded; pm_profile-friends-panel=expanded; pm_user-spaces-panel=expanded; pm_user-tags-panel=expanded; PHPSESSID=jgchmabstp0c4mvsifeut4pvr7; language=237aa174d041d3c27a3855b2e8b827dc88da4a05fb5d04c52c4ce0a6d80e13c9a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; pm_getting-started-panel=expanded; _csrf=9caca25f533c6cd1106d2a781f942281feb8c6c8768fa4ebe854c4580977e8f2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%223%078%D0%C4n%01%015I%D5%89%18%CE%07%16%82%21%DB%0D%3C%94%1B%FA7%01%C6%3D%5B%D4%89%9F%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=dashboard%2Fdashboard'
+    'HTTP_DNT' => '1'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.245.181'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '56895'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'REQUEST_URI' => '/index.php?r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527601177.533
+    'REQUEST_TIME' => 1527601177
+]
+2018-05-30 09:14:09 [147.210.245.181][4][-][error][application] yii\base\ErrorException: Trying to get property of non-object in /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php:36
+Stack trace:
+#0 /var/www/humhub/protected/humhub/modules/user/activities/UserFollow.php(36): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/humhub...', 36, Array)
+#1 /var/www/humhub/protected/humhub/components/SocialActivity.php(148): humhub\modules\user\activities\UserFollow->getUrl()
+#2 /var/www/humhub/protected/humhub/modules/activity/components/BaseActivity.php(63): humhub\components\SocialActivity->getViewParams(Array)
+#3 /var/www/humhub/protected/humhub/components/rendering/LayoutRenderer.php(49): humhub\modules\activity\components\BaseActivity->getViewParams(Array)
+#4 /var/www/humhub/protected/humhub/modules/activity/components/ActivityWebRenderer.php(52): humhub\components\rendering\LayoutRenderer->render(Object(humhub\modules\user\activities\UserFollow), Array)
+#5 /var/www/humhub/protected/humhub/modules/activity/models/Activity.php(116): humhub\modules\activity\components\ActivityWebRenderer->render(Object(humhub\modules\user\activities\UserFollow))
+#6 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(324): humhub\modules\activity\models\Activity->getWallOut(Array)
+#7 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(358): humhub\modules\stream\actions\Stream::renderEntry(Object(humhub\modules\activity\models\Activity), Array)
+#8 /var/www/humhub/protected/humhub/modules/stream/actions/Stream.php(233): humhub\modules\stream\actions\Stream::getContentResultEntry(Object(humhub\modules\content\models\Content))
+#9 [internal function]: humhub\modules\stream\actions\Stream->run()
+#10 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#11 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#12 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('stream', Array)
+#13 /var/www/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('dashboard/dashb...', Array)
+#14 /var/www/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#15 /var/www/humhub/index.php(25): yii\base\Application->run()
+#16 {main}
+2018-05-30 09:14:09 [147.210.245.181][4][-][info][application] $_GET = [
+    'r' => 'dashboard/dashboard/stream'
+    'mode' => 'activity'
+    'StreamQuery' => [
+        'sort' => 'u'
+        'from' => '0'
+        'limit' => '10'
+        'suppressionsOnly' => 'false'
+    ]
+]
+
+$_SERVER = [
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_S_DN_C' => 'FR'
+    'SSL_SERVER_S_DN_L' => 'Pessac'
+    'SSL_SERVER_S_DN_O' => 'Université de Bordeaux'
+    'SSL_SERVER_S_DN_CN' => 'ulab.u-bordeaux.fr'
+    'SSL_SERVER_I_DN_C' => 'NL'
+    'SSL_SERVER_I_DN_ST' => 'Noord-Holland'
+    'SSL_SERVER_I_DN_L' => 'Amsterdam'
+    'SSL_SERVER_I_DN_O' => 'TERENA'
+    'SSL_SERVER_I_DN_CN' => 'TERENA SSL CA 3'
+    'SSL_SERVER_SAN_DNS_0' => 'ulab.u-bordeaux.fr'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.25'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2l'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES128-GCM-SHA256'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '128'
+    'SSL_CIPHER_ALGKEYSIZE' => '128'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '3'
+    'SSL_SERVER_M_SERIAL' => '07E0B91A3FBE84A7D6DF8D1151B0DB88'
+    'SSL_SERVER_V_START' => 'Mar 27 00:00:00 2018 GMT'
+    'SSL_SERVER_V_END' => 'Jun 29 00:00:00 2020 GMT'
+    'SSL_SERVER_S_DN' => 'CN=ulab.u-bordeaux.fr,O=Université de Bordeaux,L=Pessac,C=FR'
+    'SSL_SERVER_I_DN' => 'CN=TERENA SSL CA 3,O=TERENA,L=Amsterdam,ST=Noord-Holland,C=NL'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha256WithRSAEncryption'
+    'SSL_SESSION_RESUMED' => 'Initial'
+    'HTTP_HOST' => 'ulab.u-bordeaux.fr'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => 'L_1YDqqUVpeWE7M2Qg42bhsegkUrfbldkWhl3N0EnjtPTi8Vw0bU507IgabeAhlY_TI_3SnmwygN3T-WLxSxgw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+    'HTTP_REFERER' => 'https://ulab.u-bordeaux.fr/index.php?r=dashboard%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=f37410ec4ab5b96e37b26d0fbdeec4d05a3aef9122c1650e16cd807aa1114796a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B4%2C%226ff5a5b1-1ad8-4415-8f64-5a5474bf48b3%22%2C2592000%5D%22%3B%7D; PHPSESSID=m48effdmimn7pkk7tiorp8oo71; _csrf=502e89ae7ab774e647aab18a1cfa657f9a9adbbafa6933a1f6cd6ec7b4caf33ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%60%B3w%1Bi%D2%82p%D8%DB2%90%9C%0C%2F6%E6%2C%BD%98%02%9Bzu%9C%B5ZJ%F2%10%2F%B8%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at ulab.u-bordeaux.fr Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'ulab.u-bordeaux.fr'
+    'SERVER_ADDR' => '147.210.216.24'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '147.210.245.181'
+    'DOCUMENT_ROOT' => '/var/www/humhub'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/humhub/index.php'
+    'REMOTE_PORT' => '49208'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'REQUEST_URI' => '/index.php?r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=u&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1527664449.673
+    'REQUEST_TIME' => 1527664449
+]

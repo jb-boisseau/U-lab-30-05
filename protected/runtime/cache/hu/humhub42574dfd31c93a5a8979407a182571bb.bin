@@ -1,0 +1,23 @@
+a:2:{i:0;s:1018:"
+<a href="/index.php?r=activity%2Flink&id=9">
+    <li class="activity-entry" data-stream-entry data-action-component="activity.ActivityStreamEntry" data-content-key="14">
+        <div class="media">
+                            <!-- Show user image -->
+                <img class="media-object img-rounded pull-left" data-src="holder.js/32x32" alt="32x32"
+                     style="width: 32px; height: 32px;"
+                     src="/uploads/profile_image/dc2a4fd2-ea97-4db9-845b-e9978164aecd.jpg?m=1526384276">
+            
+            <!-- Show space image, if you are outside from a space -->
+                            
+            
+            <div class="media-body text-break">
+
+                <!-- Show content -->
+                <strong>Jean-Baptiste Boisseau</strong> suit maintenant <strong>Baptiste Briand</strong>.<br>
+
+                <!-- show time -->
+                <span class="time"><span title="16 mai 2018 - 15:34">16 mai 2018</span></span>            </div>
+        </div>
+    </li>
+</a>
+";i:1;N;}
