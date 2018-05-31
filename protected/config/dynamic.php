@@ -62,7 +62,7 @@
         'installer_database' => 'ulab',
       ),
     ),
-    'config_created_at' => 1527750762,
+    'config_created_at' => 1527751048,
     'horImageScrollOnMobile' => '1',
     'databaseInstalled' => true,
     'installed' => true,
