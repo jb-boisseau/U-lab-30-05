@@ -5,8 +5,8 @@
     array (
       'class' => 'yii\\db\\Connection',
       'dsn' => 'mysql:host=localhost;dbname=ulab',
-      'username' => 'ulab',
-      'password' => 'ul@b005',
+      'username' => 'root',
+      'password' => '',
       'charset' => 'utf8',
     ),
     'user' => 
@@ -16,17 +16,14 @@
     array (
       'transport' => 
       array (
-        'class' => 'Swift_SmtpTransport',
-        'host' => 'mtaoutliste.u-bordeaux.fr',
-        'authMode' => 'null',
-        'port' => '25',
+        'class' => 'Swift_MailTransport',
       ),
       'view' => 
       array (
         'theme' => 
         array (
           'name' => 'humhubsave1304',
-          'basePath' => '/var/www/humhub/themes/humhubsave1304',
+          'basePath' => 'C:/xampp/htdocs/U-lab-30-05/themes\\humhubsave1304',
           'publishResources' => false,
         ),
       ),
@@ -41,7 +38,7 @@
       'theme' => 
       array (
         'name' => 'humhubsave1304',
-        'basePath' => '/var/www/humhub/themes/humhubsave1304',
+        'basePath' => 'C:/xampp/htdocs/U-lab-30-05/themes\\humhubsave1304',
         'publishResources' => false,
       ),
     ),
@@ -65,12 +62,12 @@
         'installer_database' => 'ulab',
       ),
     ),
-    'config_created_at' => 1527595243,
+    'config_created_at' => 1527750762,
     'horImageScrollOnMobile' => '1',
     'databaseInstalled' => true,
     'installed' => true,
   ),
-  'name' => 'U-Lab',
+  'name' => 'U-lab',
   'language' => 'fr',
   'timeZone' => 'Europe/Berlin',
 ); ?>
