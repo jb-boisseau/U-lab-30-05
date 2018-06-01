@@ -1,3 +1,6 @@
+
+
+
 <?php
 
 /**
@@ -23,3 +26,4 @@ $config = yii\helpers\ArrayHelper::merge(
 );
 
 (new humhub\components\Application($config))->run();
+

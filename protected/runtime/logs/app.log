@@ -2609,3 +2609,365 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1527664449.673
     'REQUEST_TIME' => 1527664449
 ]
+2018-06-01 09:12:26 [::1][1][-][error][application] Could not load search result humhub\modules\user\models\User - 5
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:120
+2018-06-01 09:12:26 [::1][1][-][error][application] Could not load search result humhub\modules\user\models\User - 6
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:120
+2018-06-01 09:12:26 [::1][1][-][error][application] Could not load search result humhub\modules\user\models\User - 4
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:120
+2018-06-01 09:12:26 [::1][1][-][info][application] $_GET = [
+    'r' => 'directory/directory/members'
+    '_pjax' => '#layout-content'
+    '_' => '1527837048543'
+]
+
+$_SERVER = [
+    'BASE' => '/U-lab-30-05'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'localhost'
+    'SSL_SERVER_S_DN_CN' => 'localhost'
+    'SSL_SERVER_I_DN_CN' => 'localhost'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.33'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2n'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES256-GCM-SHA384'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '256'
+    'SSL_CIPHER_ALGKEYSIZE' => '256'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'B5C752C98781B503'
+    'SSL_SERVER_V_START' => 'Nov 10 23:48:47 2009 GMT'
+    'SSL_SERVER_V_END' => 'Nov  8 23:48:47 2019 GMT'
+    'SSL_SERVER_S_DN' => 'CN=localhost'
+    'SSL_SERVER_I_DN' => 'CN=localhost'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha1WithRSAEncryption'
+    'SSL_SESSION_ID' => 'e02c33c1464cb79b35c981aef62f742410b8fe95e5db9856090010f802aaa8b9'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'aooA4gsq9fjpUILecw-ylMTUyQBHt28kMFhomPSMwDvZ1QlhVj0DtyTnQH1Hwbu5K3p3fm7FHxm2nBOf4VAP8w=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_REFERER' => 'https://localhost/U-lab-30-05/index.php?r=directory%2Fdirectory'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; __utma=111872281.2023499014.1524643884.1524643884.1524643884.1; __utmz=111872281.1524643884.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); language=2f131195efe8b08a14c8cfdafe918e06b8b0ea1d451d9c4f410e89fd2d9ed5cea%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _csrf=5a1fa95f9d9519ab01879f7cd0a3765539b445aee3472aec93edf4a7c11d5854a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B3_%09%83%5D%17%F6O%CD%B7%C2%A34%CE%09-%EF%AE%BE%7E%29rp%3D%86%C4%7B%07%15%DC%CF%C8%22%3B%7D; PHPSESSID=j32bboudv67o5ko5v0e43hu6l6; _identity=c433778eb37f95aefdefedc2e81ef0e63fdb3408e2d2059c9f13c6d6944c8a88a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22565afadd-1767-45cd-ae4f-3dc902c204de%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\RailsInstaller\\Git\\cmd;C:\\RailsInstaller\\Ruby2.3.3\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\Program Files\\PuTTY\\;C:\\Program Files\\nodejs\\;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\Nuxeo\\Drive\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win32) OpenSSL/1.0.2n PHP/7.0.29 Server at localhost Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win32) OpenSSL/1.0.2n PHP/7.0.29'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/U-lab-30-05/index.php'
+    'REMOTE_PORT' => '56847'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=directory%2Fdirectory%2Fmembers&_pjax=%23layout-content&_=1527837048543'
+    'REQUEST_URI' => '/U-lab-30-05/index.php?r=directory%2Fdirectory%2Fmembers&_pjax=%23layout-content&_=1527837048543'
+    'SCRIPT_NAME' => '/U-lab-30-05/index.php'
+    'PHP_SELF' => '/U-lab-30-05/index.php'
+    'REQUEST_TIME_FLOAT' => 1527837146.569
+    'REQUEST_TIME' => 1527837146
+]
+2018-06-01 09:12:27 [::1][1][-][error][application] Could not load search result humhub\modules\user\models\User - 5
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:120
+2018-06-01 09:12:27 [::1][1][-][error][application] Could not load search result humhub\modules\user\models\User - 6
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:120
+2018-06-01 09:12:27 [::1][1][-][error][application] Could not load search result humhub\modules\user\models\User - 4
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:120
+2018-06-01 09:12:27 [::1][1][-][info][application] $_GET = [
+    'r' => 'directory/directory/members'
+    '_pjax' => '#layout-content'
+    '_' => '1527837048547'
+]
+
+$_SERVER = [
+    'BASE' => '/U-lab-30-05'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'localhost'
+    'SSL_SERVER_S_DN_CN' => 'localhost'
+    'SSL_SERVER_I_DN_CN' => 'localhost'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.33'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2n'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES256-GCM-SHA384'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '256'
+    'SSL_CIPHER_ALGKEYSIZE' => '256'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'B5C752C98781B503'
+    'SSL_SERVER_V_START' => 'Nov 10 23:48:47 2009 GMT'
+    'SSL_SERVER_V_END' => 'Nov  8 23:48:47 2019 GMT'
+    'SSL_SERVER_S_DN' => 'CN=localhost'
+    'SSL_SERVER_I_DN' => 'CN=localhost'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha1WithRSAEncryption'
+    'SSL_SESSION_ID' => 'e02c33c1464cb79b35c981aef62f742410b8fe95e5db9856090010f802aaa8b9'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'aooA4gsq9fjpUILecw-ylMTUyQBHt28kMFhomPSMwDvZ1QlhVj0DtyTnQH1Hwbu5K3p3fm7FHxm2nBOf4VAP8w=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_REFERER' => 'https://localhost/U-lab-30-05/index.php?r=directory%2Fdirectory'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; __utma=111872281.2023499014.1524643884.1524643884.1524643884.1; __utmz=111872281.1524643884.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); language=2f131195efe8b08a14c8cfdafe918e06b8b0ea1d451d9c4f410e89fd2d9ed5cea%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _csrf=5a1fa95f9d9519ab01879f7cd0a3765539b445aee3472aec93edf4a7c11d5854a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B3_%09%83%5D%17%F6O%CD%B7%C2%A34%CE%09-%EF%AE%BE%7E%29rp%3D%86%C4%7B%07%15%DC%CF%C8%22%3B%7D; PHPSESSID=j32bboudv67o5ko5v0e43hu6l6; _identity=c433778eb37f95aefdefedc2e81ef0e63fdb3408e2d2059c9f13c6d6944c8a88a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22565afadd-1767-45cd-ae4f-3dc902c204de%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\RailsInstaller\\Git\\cmd;C:\\RailsInstaller\\Ruby2.3.3\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\Program Files\\PuTTY\\;C:\\Program Files\\nodejs\\;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\Nuxeo\\Drive\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win32) OpenSSL/1.0.2n PHP/7.0.29 Server at localhost Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win32) OpenSSL/1.0.2n PHP/7.0.29'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/U-lab-30-05/index.php'
+    'REMOTE_PORT' => '56865'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=directory%2Fdirectory%2Fmembers&_pjax=%23layout-content&_=1527837048547'
+    'REQUEST_URI' => '/U-lab-30-05/index.php?r=directory%2Fdirectory%2Fmembers&_pjax=%23layout-content&_=1527837048547'
+    'SCRIPT_NAME' => '/U-lab-30-05/index.php'
+    'PHP_SELF' => '/U-lab-30-05/index.php'
+    'REQUEST_TIME_FLOAT' => 1527837147.705
+    'REQUEST_TIME' => 1527837147
+]
+2018-06-01 09:12:29 [::1][1][-][error][application] Could not load search result humhub\modules\space\models\Space - 4
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:156
+2018-06-01 09:12:29 [::1][1][-][error][application] Could not load search result humhub\modules\space\models\Space - 3
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:156
+2018-06-01 09:12:29 [::1][1][-][error][application] Could not load search result humhub\modules\space\models\Space - 6
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:156
+2018-06-01 09:12:29 [::1][1][-][error][application] Could not load search result humhub\modules\space\models\Space - 2
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:156
+2018-06-01 09:12:29 [::1][1][-][error][application] Could not load search result humhub\modules\space\models\Space - 5
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:156
+2018-06-01 09:12:29 [::1][1][-][info][application] $_GET = [
+    'r' => 'directory/directory/spaces'
+    '_pjax' => '#layout-content'
+    '_' => '1527837048548'
+]
+
+$_SERVER = [
+    'BASE' => '/U-lab-30-05'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'localhost'
+    'SSL_SERVER_S_DN_CN' => 'localhost'
+    'SSL_SERVER_I_DN_CN' => 'localhost'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.33'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2n'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES256-GCM-SHA384'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '256'
+    'SSL_CIPHER_ALGKEYSIZE' => '256'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'B5C752C98781B503'
+    'SSL_SERVER_V_START' => 'Nov 10 23:48:47 2009 GMT'
+    'SSL_SERVER_V_END' => 'Nov  8 23:48:47 2019 GMT'
+    'SSL_SERVER_S_DN' => 'CN=localhost'
+    'SSL_SERVER_I_DN' => 'CN=localhost'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha1WithRSAEncryption'
+    'SSL_SESSION_ID' => 'e02c33c1464cb79b35c981aef62f742410b8fe95e5db9856090010f802aaa8b9'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'aooA4gsq9fjpUILecw-ylMTUyQBHt28kMFhomPSMwDvZ1QlhVj0DtyTnQH1Hwbu5K3p3fm7FHxm2nBOf4VAP8w=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_REFERER' => 'https://localhost/U-lab-30-05/index.php?r=directory%2Fdirectory%2Fmembers'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; __utma=111872281.2023499014.1524643884.1524643884.1524643884.1; __utmz=111872281.1524643884.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); language=2f131195efe8b08a14c8cfdafe918e06b8b0ea1d451d9c4f410e89fd2d9ed5cea%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _csrf=5a1fa95f9d9519ab01879f7cd0a3765539b445aee3472aec93edf4a7c11d5854a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B3_%09%83%5D%17%F6O%CD%B7%C2%A34%CE%09-%EF%AE%BE%7E%29rp%3D%86%C4%7B%07%15%DC%CF%C8%22%3B%7D; PHPSESSID=j32bboudv67o5ko5v0e43hu6l6; _identity=c433778eb37f95aefdefedc2e81ef0e63fdb3408e2d2059c9f13c6d6944c8a88a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22565afadd-1767-45cd-ae4f-3dc902c204de%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\RailsInstaller\\Git\\cmd;C:\\RailsInstaller\\Ruby2.3.3\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\Program Files\\PuTTY\\;C:\\Program Files\\nodejs\\;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\Nuxeo\\Drive\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win32) OpenSSL/1.0.2n PHP/7.0.29 Server at localhost Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win32) OpenSSL/1.0.2n PHP/7.0.29'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/U-lab-30-05/index.php'
+    'REMOTE_PORT' => '56865'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=directory%2Fdirectory%2Fspaces&_pjax=%23layout-content&_=1527837048548'
+    'REQUEST_URI' => '/U-lab-30-05/index.php?r=directory%2Fdirectory%2Fspaces&_pjax=%23layout-content&_=1527837048548'
+    'SCRIPT_NAME' => '/U-lab-30-05/index.php'
+    'PHP_SELF' => '/U-lab-30-05/index.php'
+    'REQUEST_TIME_FLOAT' => 1527837149.224
+    'REQUEST_TIME' => 1527837149
+]
+2018-06-01 09:12:32 [::1][1][-][error][application] Could not load search result humhub\modules\user\models\User - 5
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:120
+2018-06-01 09:12:32 [::1][1][-][error][application] Could not load search result humhub\modules\user\models\User - 6
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:120
+2018-06-01 09:12:32 [::1][1][-][error][application] Could not load search result humhub\modules\user\models\User - 4
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\search\libs\SearchResultSet.php:59
+    in C:\xampp\htdocs\U-lab-30-05\protected\humhub\modules\directory\controllers\DirectoryController.php:120
+2018-06-01 09:12:32 [::1][1][-][info][application] $_GET = [
+    'r' => 'directory/directory/members'
+    '_pjax' => '#layout-content'
+    '_' => '1527837048550'
+]
+
+$_SERVER = [
+    'BASE' => '/U-lab-30-05'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTPS' => 'on'
+    'SSL_TLS_SNI' => 'localhost'
+    'SSL_SERVER_S_DN_CN' => 'localhost'
+    'SSL_SERVER_I_DN_CN' => 'localhost'
+    'SSL_VERSION_INTERFACE' => 'mod_ssl/2.4.33'
+    'SSL_VERSION_LIBRARY' => 'OpenSSL/1.0.2n'
+    'SSL_PROTOCOL' => 'TLSv1.2'
+    'SSL_SECURE_RENEG' => 'true'
+    'SSL_COMPRESS_METHOD' => 'NULL'
+    'SSL_CIPHER' => 'ECDHE-RSA-AES256-GCM-SHA384'
+    'SSL_CIPHER_EXPORT' => 'false'
+    'SSL_CIPHER_USEKEYSIZE' => '256'
+    'SSL_CIPHER_ALGKEYSIZE' => '256'
+    'SSL_CLIENT_VERIFY' => 'NONE'
+    'SSL_SERVER_M_VERSION' => '1'
+    'SSL_SERVER_M_SERIAL' => 'B5C752C98781B503'
+    'SSL_SERVER_V_START' => 'Nov 10 23:48:47 2009 GMT'
+    'SSL_SERVER_V_END' => 'Nov  8 23:48:47 2019 GMT'
+    'SSL_SERVER_S_DN' => 'CN=localhost'
+    'SSL_SERVER_I_DN' => 'CN=localhost'
+    'SSL_SERVER_A_KEY' => 'rsaEncryption'
+    'SSL_SERVER_A_SIG' => 'sha1WithRSAEncryption'
+    'SSL_SESSION_ID' => 'e02c33c1464cb79b35c981aef62f742410b8fe95e5db9856090010f802aaa8b9'
+    'SSL_SESSION_RESUMED' => 'Resumed'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'aooA4gsq9fjpUILecw-ylMTUyQBHt28kMFhomPSMwDvZ1QlhVj0DtyTnQH1Hwbu5K3p3fm7FHxm2nBOf4VAP8w=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_REFERER' => 'https://localhost/U-lab-30-05/index.php?r=directory%2Fdirectory%2Fuser-posts'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_user-statistics-panel=expanded; pm_new-spaces-panel=expanded; pm_spaces-statistics-panel=expanded; __utma=111872281.2023499014.1524643884.1524643884.1524643884.1; __utmz=111872281.1524643884.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); language=2f131195efe8b08a14c8cfdafe918e06b8b0ea1d451d9c4f410e89fd2d9ed5cea%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22fr%22%3B%7D; _csrf=5a1fa95f9d9519ab01879f7cd0a3765539b445aee3472aec93edf4a7c11d5854a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B3_%09%83%5D%17%F6O%CD%B7%C2%A34%CE%09-%EF%AE%BE%7E%29rp%3D%86%C4%7B%07%15%DC%CF%C8%22%3B%7D; PHPSESSID=j32bboudv67o5ko5v0e43hu6l6; _identity=c433778eb37f95aefdefedc2e81ef0e63fdb3408e2d2059c9f13c6d6944c8a88a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22565afadd-1767-45cd-ae4f-3dc902c204de%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\RailsInstaller\\Git\\cmd;C:\\RailsInstaller\\Ruby2.3.3\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\composer;C:\\Program Files\\Git\\cmd;C:\\Program Files\\PuTTY\\;C:\\Program Files\\nodejs\\;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files (x86)\\Nuxeo\\Drive\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win32) OpenSSL/1.0.2n PHP/7.0.29 Server at localhost Port 443</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win32) OpenSSL/1.0.2n PHP/7.0.29'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '443'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'https'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/U-lab-30-05/index.php'
+    'REMOTE_PORT' => '56865'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=directory%2Fdirectory%2Fmembers&_pjax=%23layout-content&_=1527837048550'
+    'REQUEST_URI' => '/U-lab-30-05/index.php?r=directory%2Fdirectory%2Fmembers&_pjax=%23layout-content&_=1527837048550'
+    'SCRIPT_NAME' => '/U-lab-30-05/index.php'
+    'PHP_SELF' => '/U-lab-30-05/index.php'
+    'REQUEST_TIME_FLOAT' => 1527837152.071
+    'REQUEST_TIME' => 1527837152
+]
