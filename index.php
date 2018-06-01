@@ -25,5 +25,7 @@ $config = yii\helpers\ArrayHelper::merge(
     require(__DIR__ . '/protected/config/web.php')
 );
 
+
+
 (new humhub\components\Application($config))->run();
 
